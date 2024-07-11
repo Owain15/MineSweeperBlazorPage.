@@ -1,0 +1,59 @@
+﻿@page "/MineSweeper"
+@rendermode InteractiveServer 
+
+<PageTitle>MineSweeper</PageTitle>
+
+<h1>MineSweeper.</h1>
+
+<hr />
+
+<div class="GameWindow"> 
+
+   <div class="GameHeader">
+	 
+	   <div>Is Game In Play...</div>
+
+   </div>
+   
+   <div class="GameDisplay">
+		@for (int x = 0; x < mineField.cellData.GetLength(0); x++)
+		{
+			<div>
+			@for (int y = 0; y < mineField.cellData.GetLength(1); y++)
+			{
+					var text = " ";
+
+					if(mineField.cellData[x,y].DoesCellContainsAMine)
+					{ text = "X"; }
+					else { text = mineField.cellData[x, y].AdjacentMineCount.ToString(); }
+
+					<button class="Cell">@text</button>
+			}
+			</div>
+		}
+	</div>
+
+   <div class="Footer"></div>
+
+</div>
+
+<hr />
+
+@code {
+
+	GameSettings settings;
+	MineField mineField;
+
+	protected override void OnInitialized()
+	{
+		settings = new GameSettings();
+		settings.XLength = 10;
+		settings.YHeight = 5;
+		settings.NumberOfMines = 16;
+
+	    mineField = new MineField(settings);
+	}
+
+	
+
+}

@@ -1,0 +1,24 @@
+body[b-7ij5j5ntsb] {
+}
+.GameWindow[b-7ij5j5ntsb] {
+    border: solid 2px;
+}
+.GameHeader[b-7ij5j5ntsb] {
+   
+    border: solid 2px;
+}
+.GameDisplay[b-7ij5j5ntsb] {
+    
+    border: solid 2px;
+}
+.Cell[b-7ij5j5ntsb] {
+    vertical-align:top;
+    height: 30px;
+    width: 30px;
+    border:solid 2px;
+    background-color: powderblue;
+    
+}
+.Footer[b-7ij5j5ntsb] {
+    border: solid 2px;
+}

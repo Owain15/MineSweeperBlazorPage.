@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ojdav\\visual studio files\\Blazor\\MineSweeperBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MineSweeperBlazorApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MineSweeperBlazorApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\ojdav\\visual studio files\\Blazor\\MineSweeperBlazorApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\ojdav\\visual studio files\\Blazor\\MineSweeperBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ojdav\\visual studio files\\Blazor\\MineSweeperBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ojdav\\visual studio files\\Blazor\\MineSweeperBlazorApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MineSweeperBlazorApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MineSweeperBlazorApp.props",
+      "PackagePath": "build\\MineSweeperBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MineSweeperBlazorApp.props",
+      "PackagePath": "buildMultiTargeting\\MineSweeperBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MineSweeperBlazorApp.props",
+      "PackagePath": "buildTransitive\\MineSweeperBlazorApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ojdav\\visual studio files\\Blazor\\MineSweeperBlazorApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50BC3D43-6B1B-4AB9-8F91-0397175D481D}|MineSweeperBlazorApp.csproj|c:\\users\\ojdav\\visual studio files\\blazor\\minesweeperblazorapp\\components\\pages\\minesweeper.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{50BC3D43-6B1B-4AB9-8F91-0397175D481D}|MineSweeperBlazorApp.csproj|solutionrelative:components\\pages\\minesweeper.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MineSweeper.razor",
+              "DocumentMoniker": "C:\\Users\\ojdav\\visual studio files\\Blazor\\MineSweeperBlazorApp\\Components\\Pages\\MineSweeper.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\MineSweeper.razor",
+              "ToolTip": "C:\\Users\\ojdav\\visual studio files\\Blazor\\MineSweeperBlazorApp\\Components\\Pages\\MineSweeper.razor",
+              "RelativeToolTip": "Components\\Pages\\MineSweeper.razor",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAAB0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T10:54:45.281Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
