@@ -30,10 +30,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ojdav/visual studio files/Blazor/MineSweeperBlazorApp/Components/Pages/MineSweeper.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNaW5lU3dlZXBlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ojdav/visual studio files/Blazor/MineSweeperBlazorApp/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,3 +45,7 @@ build_metadata.AdditionalFiles.CssScope = b-42xfqpkp5g
 [C:/Users/ojdav/visual studio files/Blazor/MineSweeperBlazorApp/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-k2bm8pdn0g
+
+[C:/Users/ojdav/visual studio files/Blazor/MineSweeperBlazorApp/Components/Pages/MineSweeper.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNaW5lU3dlZXBlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-7ij5j5ntsb

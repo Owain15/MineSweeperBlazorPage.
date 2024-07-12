@@ -23,11 +23,30 @@
 			{
 					var text = " ";
 
-					if(mineField.cellData[x,y].DoesCellContainsAMine)
+					var gridReffX = x;
+					var gridReffY = y;
+
+					if(mineField.cellData[x,y].State==CellState.Hidden)
+					{ text = " "; }
+					else if (mineField.cellData[x, y].State == CellState.Flagged)
+					{ text = "F"; }
+					else if (mineField.cellData[x, y].DoesCellContainsAMine)
 					{ text = "X"; }
 					else { text = mineField.cellData[x, y].AdjacentMineCount.ToString(); }
 
-					<button class="Cell">@text</button>
+					<button 
+						
+						class="Cell" 
+
+						@onclick=" e => mineField.HandleLeftClickEvent(gridReffX,gridReffY)"
+							
+						@* @onpointerdown="e=>mineField.HandleLeftClickHoldEvent(gridReffX,gridReffY)"
+						@onpointerup="e => mineField.HandleLeftClickHoldUpEvent(gridReffX,gridReffY)" *@
+
+						@oncontextmenu:preventDefault="true"
+						@oncontextmenu="e => mineField.HandleRightClickEvent(gridReffX,gridReffY)"
+						
+					>@text</button>
 			}
 			</div>
 		}
@@ -49,11 +68,12 @@
 		settings = new GameSettings();
 		settings.XLength = 10;
 		settings.YHeight = 5;
-		settings.NumberOfMines = 16;
+		settings.NumberOfMines = 6;
 
-	    mineField = new MineField(settings);
+		mineField = new MineField(settings);
 	}
 
 	
+
 
 }

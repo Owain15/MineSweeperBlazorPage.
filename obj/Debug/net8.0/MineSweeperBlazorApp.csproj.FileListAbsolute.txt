@@ -27,4 +27,5 @@ C:\Users\ojdav\visual studio files\Blazor\MineSweeperBlazorApp\obj\Debug\net8.0\
 C:\Users\ojdav\visual studio files\Blazor\MineSweeperBlazorApp\obj\Debug\net8.0\MineSweeperBlazorApp.pdb
 C:\Users\ojdav\visual studio files\Blazor\MineSweeperBlazorApp\obj\Debug\net8.0\MineSweeperBlazorApp.genruntimeconfig.cache
 C:\Users\ojdav\visual studio files\Blazor\MineSweeperBlazorApp\obj\Debug\net8.0\ref\MineSweeperBlazorApp.dll
+C:\Users\ojdav\visual studio files\Blazor\MineSweeperBlazorApp\obj\Debug\net8.0\MineSweeperBlazorApp.sourcelink.json
 C:\Users\ojdav\visual studio files\Blazor\MineSweeperBlazorApp\obj\Debug\net8.0\scopedcss\Components\Pages\MineSweeper.razor.rz.scp.css
