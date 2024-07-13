@@ -1,17 +1,83 @@
-﻿body {
-}
+﻿
 .GameWindow {
-    border: solid 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    min-width: 50%;
+    border: double 2px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(140, 140, 140);
 }
+
+/*Header Section*/
+
 .GameHeader {
-   
+    display: inline-flex;
+    justify-content:space-between;
+    width: 100%;
+    padding: 5px;
     border: solid 2px;
+    border-radius: 5px;
+    background-color: rgb(170, 170, 170);
 }
-.GameDisplay {
+.Flag-Readout {
+    display: inline-flex;
+    justify-content:space-around;
+    height: fit-content;
+    width: 100%;
+    margin: 5px;
+    border: double 2px;
+    border-radius: 5px;
+    background-color: rgb(170, 170, 170);
+}
+.Flag-Readout-Box {
+    display: flex;
+    justify-content:center;
+    height: auto;
+    width: 30px;
+    border: double 2px;
+    border-radius: 5px;
+    background-color: rgb(170, 170, 170);
+}
+.Reset {
+    display: inline-flex;
+    height: fit-content;
+    width: fit-content;
     
-    border: solid 2px;
+    border: double 2px;
+    border-radius: 5px;
+    background-color: rgb(170, 170, 170);
+    margin:5px;
 }
+.SpairRightDiv {
+    display: inline-flex;
+    height: auto;
+    width: 100%;
+    border: double 2px;
+    border-radius: 5px;
+    background-color: rgb(170, 170, 170);
+    margin:5px;
+}
+
+/*End Headar Section*/
+
+.GameDisplay {
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(0, 50, 5);
+}
+
+/*Cell Type Section*/
+
 .Cell {
+    
     vertical-align:top;
     height: 30px;
     width: 30px;
@@ -19,6 +85,57 @@
     background-color: powderblue;
     
 }
+.Cell-Hidden {
+    vertical-align: top;
+    height: 30px;
+    width: 30px;
+    border:double 1px;
+    border-radius: 3px;
+    background-color: rgb(0, 150, 5);
+}
+.Cell-Flagged {
+    vertical-align: top;
+    height: 30px;
+    width: 30px;
+    border: solid 1px;
+    border-radius: 2px;
+    background-color: rgb(0, 175, 5);
+}
+.Cell-Mine {
+    vertical-align: top;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(0, 50, 5);
+}
+.Cell-MineData {
+    vertical-align: top;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 0px;
+    background-color: rgb(0, 95, 5);
+    color: rgb(0, 215, 5);
+}
+.Cell-MineData-Zero {
+    vertical-align: top;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 0px;
+    background-color: rgb(0, 95, 5);
+}
+
+/*End Cell Type Section*/
+
 .Footer {
+    display: flex;
+    justify-content:center;
+    margin:auto;
+    height: 30px;
+    width: 100%;
     border: solid 2px;
+    border-radius: 5px;
+    background-color: rgb(170, 170, 170);
 }

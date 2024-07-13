@@ -10,8 +10,10 @@
 <div class="GameWindow"> 
 
    <div class="GameHeader">
-	 
-	   <div>Is Game In Play...</div>
+
+		<div class="Flag-Readout"> Flags Left <span class="Flag-Readout-Box">@mineField.numberOfFlags</span></div>
+		<button class="Reset"  @onclick="ResetNewGame">@GetGameStateIcon()</button> 
+		<div class="SpairRightDiv">..</div> 
 
    </div>
    
@@ -19,40 +21,23 @@
 		@for (int x = 0; x < mineField.cellData.GetLength(0); x++)
 		{
 			<div>
-			@for (int y = 0; y < mineField.cellData.GetLength(1); y++)
+	        @for (int y = 0; y < mineField.cellData.GetLength(1); y++)
 			{
-					var text = " ";
-
 					var gridReffX = x;
 					var gridReffY = y;
 
-					if(mineField.cellData[x,y].State==CellState.Hidden)
-					{ text = " "; }
-					else if (mineField.cellData[x, y].State == CellState.Flagged)
-					{ text = "F"; }
-					else if (mineField.cellData[x, y].DoesCellContainsAMine)
-					{ text = "X"; }
-					else { text = mineField.cellData[x, y].AdjacentMineCount.ToString(); }
-
-					<button 
-						
-						class="Cell" 
-
-						@onclick=" e => mineField.HandleLeftClickEvent(gridReffX,gridReffY)"
-							
-						@* @onpointerdown="e=>mineField.HandleLeftClickHoldEvent(gridReffX,gridReffY)"
-						@onpointerup="e => mineField.HandleLeftClickHoldUpEvent(gridReffX,gridReffY)" *@
-
-						@oncontextmenu:preventDefault="true"
-						@oncontextmenu="e => mineField.HandleRightClickEvent(gridReffX,gridReffY)"
-						
-					>@text</button>
+					<button class="@GetCellCSS(gridReffX, gridReffY)"
+							@onclick=" e => mineField.HandleLeftClickEvent(gridReffX, gridReffY)"
+							@oncontextmenu:preventDefault="true" @oncontextmenu="e => mineField.HandleRightClickEvent(gridReffX, gridReffY)">
+				            @GetCellIcon(gridReffX, gridReffY)
+					</button>
+					
 			}
 			</div>
 		}
 	</div>
-
-   <div class="Footer"></div>
+	
+   <div class="Footer">@GetGameOverText()</div>
 
 </div>
 
@@ -68,12 +53,53 @@
 		settings = new GameSettings();
 		settings.XLength = 10;
 		settings.YHeight = 5;
-		settings.NumberOfMines = 6;
+		settings.NumberOfMines = 12;
 
 		mineField = new MineField(settings);
 	}
+	public void ResetNewGame()
+	{
+		mineField = new MineField(settings);
+	}
+	private string GetCellIcon(int x, int y)
+	{
+		if (mineField.cellData[x, y].State == CellState.Hidden)
+		{ return " "; }
+		else if (mineField.cellData[x, y].State == CellState.Flagged)
+		{ return "🚩"; }
+		else if (mineField.cellData[x, y].DoesCellContainsAMine)
+		{ return "💥"; }
+		else if (mineField.cellData[x, y].State == CellState.UnHidden && mineField.cellData[x, y].AdjacentMineCount > 0)
+		{ return mineField.cellData[x, y].AdjacentMineCount.ToString();  }
+		else{ return " "; }
 
-	
+	}
+	private string GetCellCSS(int x, int y)
+	{
+		if (mineField.cellData[x, y].State == CellState.Hidden)
+		{ return "Cell-Hidden"; }
+		else if (mineField.cellData[x, y].State == CellState.Flagged)
+		{ return "Cell-Flagged"; }
+		else if (mineField.cellData[x, y].DoesCellContainsAMine)
+		{ return "Cell-Mine"; }
+		else if (mineField.cellData[x, y].State == CellState.UnHidden && mineField.cellData[x, y].AdjacentMineCount > 0)
+		{ return "Cell-MineData"; }
+		else { return "Cell-MineData-Zero"; }
+
+	}
+	private string GetGameStateIcon()
+	{ 
+		if (mineField.IsGameStillRunning) { return "😐"; }
+		else { return "🤯"; }
+	}
+	private string? GetGameOverText()
+	{
+		if( !mineField.IsGameStillRunning){ return "Game Over!"; }
+		else{ return null; }
+	}
+
+
+
 
 
 }

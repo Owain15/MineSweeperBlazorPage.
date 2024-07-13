@@ -46,15 +46,20 @@ internal class MineField
       { -1, 0 },            { 1, 0 }, 
 	  { -1, 1 }, { 0, 1 }, { 1, 1 } };
 
+	public int numberOfFlags;
+
 	public MineField( GameSettings settings)
 	{
 		IsGameStillRunning = true;
+
+		numberOfFlags = settings.NumberOfMines;
 
 		cellData = new Cell[settings.XLength, settings.YHeight];
 	
 		SetCellValues();
 		SetMines(settings);
 		SetAdjacentMineCount();
+
 	}
 
 	private void SetCellValues()
@@ -149,6 +154,8 @@ internal class MineField
 
 	public void HandleLeftClickEvent(int x, int y)
 	{
+		if (!IsGameStillRunning) {  return; }
+
 		if (cellData[x,y].State == CellState.Hidden)
 		{ cellData[x, y].State = CellState.UnHidden; }
 
@@ -160,11 +167,20 @@ internal class MineField
 	}
 	public void HandleRightClickEvent(int x, int y)
 	{
-		if (cellData[x,y].State == CellState.Hidden)
-		{ cellData[x, y].State = CellState.Flagged; }
+
+		if (!IsGameStillRunning) { return; }
+
+		if (cellData[x,y].State == CellState.Hidden && numberOfFlags > 0)
+		{
+			cellData[x, y].State = CellState.Flagged;
+		    numberOfFlags--;
+		}
 		
 		else if (cellData[x, y].State == CellState.Flagged)
-		{ cellData[x, y].State = CellState.Hidden; }
+		{ 
+			cellData[x, y].State = CellState.Hidden;
+		    numberOfFlags++;
+		}
 
 	}
 	public void HandleLeftClickHoldEvent(int x, int y) { }
